@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MetRX · [FULL NAME]</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- IMPORTANT: this page lives inside /people -->
+  <link rel="stylesheet" href="../style.css">
+
+  <script>
+    (function () {
+      try {
+        const t = localStorage.getItem("metrx-theme");
+        if (t === "dark" || t === "light") document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body>
+<div class="page">
+
+  <header class="header">
+    <a class="brand" href="../index.html" aria-label="MetRX home">
+      <span class="dot" aria-hidden="true">●</span> MetRX
+    </a>
+
+    <div class="navwrap">
+      <button class="nav-toggle" id="navToggle" type="button" aria-controls="siteNav" aria-expanded="false">
+        Menu <span class="nav-toggle-icon" aria-hidden="true"></span>
+      </button>
+
+      <nav class="topnav" id="siteNav" aria-label="Primary">
+        <a href="../research.html">Research</a>
+        <a class="is-active" href="../people.html">People</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../resources.html">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="layout layout--person">
+
+    <!-- PROFILE band (5-col grid = gutter + 4 pillars) -->
+    <section class="profile-band" aria-label="Profile">
+      <div class="profile-wrap">
+        <div class="profile-grid">
+
+          <!-- vertical label in the gutter -->
+          <div class="pillars-label" aria-hidden="true">PROFILE</div>
+
+          <!-- pillar 1 -->
+          <div class="profile-photo">
+            <img class="profile-img" src="../assets/bios/[PHOTO-FILENAME].jpg" alt="Portrait of [FULL NAME]">
+          </div>
+
+          <!-- pillars 2–4 -->
+          <div class="profile-text">
+            <h1 class="profile-name">[FULL NAME]</h1>
+            <div class="profile-role">[ROLE]</div>
+            <div class="profile-affil">[AFFILIATION 1]<br>[AFFILIATION 2 (optional)]</div>
+
+            <p class="profile-bio">[Short bio — 2–5 lines]</p>
+
+            <div class="profile-links">
+              <!-- Remove any you don't need -->
+              <a class="news-read" href="[ORCID URL]" target="_blank" rel="noopener">ORCID</a>
+              <a class="news-read" href="[GOOGLE SCHOLAR URL]" target="_blank" rel="noopener">SCHOLAR</a>
+              <a class="news-read" href="[GITHUB URL]" target="_blank" rel="noopener">GITHUB</a>
+              <a class="news-read" href="[WEBSITE URL]" target="_blank" rel="noopener">WEBSITE</a>
+              <a class="news-read" href="mailto:[EMAIL]">EMAIL</a>
+              <a class="news-read" href="[CV PDF URL]" target="_blank" rel="noopener">CV</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS band (Selected Projects style: title left, list right) -->
+    <section class="person-pubsband" aria-label="Publications">
+      <div class="person-pubswrap">
+
+        <div class="person-pubsgrid">
+          <div class="person-pubstitleblock">
+            <h2 class="projects-title">Publications</h2>
+          </div>
+
+          <div class="person-pubslist">
+
+            <!-- Publication item -->
+            <a class="project-item" href="[DOI or URL]" target="_blank" rel="noopener">
+              <div class="project-name">[Publication title]</div>
+              <div class="project-meta">[YEAR] · [JOURNAL]</div>
+            </a>
+
+            <!-- Publication item -->
+            <a class="project-item" href="[DOI or URL]" target="_blank" rel="noopener">
+              <div class="project-name">[Publication title]</div>
+              <div class="project-meta">[YEAR] · [JOURNAL]</div>
+            </a>
+
+            <!-- Add/remove publication items as needed -->
+
+            <div class="pubs-all-link">
+              <a href="[All publications link — e.g., Scholar profile]" target="_blank" rel="noopener">All publications →</a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-left">© <span id="year"></span> MetRX</div>
+    <button class="footer-toggle" id="themeToggle" type="button" aria-label="Toggle theme">Dark</button>
+    <div class="footer-right">Healthcare · Data · Evidence</div>
+  </footer>
+
+</div>
+
+<script>
+  const html = document.documentElement;
+  const toggle = document.getElementById("themeToggle");
+  const KEY = "metrx-theme";
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+  toggle.textContent = (html.dataset.theme === "dark") ? "Light" : "Dark";
+
+  toggle.addEventListener("click", () => {
+    const next = (html.dataset.theme === "dark") ? "light" : "dark";
+    html.dataset.theme = next;
+    localStorage.setItem(KEY, next);
+    toggle.textContent = (next === "dark") ? "Light" : "Dark";
+  });
+
+  const navToggle = document.getElementById("navToggle");
+  const siteNav = document.getElementById("siteNav");
+  if (navToggle && siteNav) {
+    navToggle.addEventListener("click", () => {
+      const open = siteNav.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    document.addEventListener("click", (e) => {
+      if (!siteNav.contains(e.target) && !navToggle.contains(e.target)) {
+        siteNav.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MetRX · Professor Reecha Sofat</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="person.css">
+
+  <script>
+    (function () {
+      try {
+        const t = localStorage.getItem("metrx-theme");
+        if (t === "dark" || t === "light") document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body>
+<div class="page">
+
+  <header class="header">
+    <a class="brand" href="../index.html" aria-label="MetRX home">
+      <span class="dot" aria-hidden="true">●</span> MetRX
+    </a>
+
+    <div class="navwrap">
+      <button class="nav-toggle" id="navToggle" type="button" aria-controls="siteNav" aria-expanded="false">
+        Menu <span class="nav-toggle-icon" aria-hidden="true"></span>
+      </button>
+
+      <nav class="topnav" id="siteNav" aria-label="Primary">
+        <a href="../research.html">Research</a>
+        <a class="is-active" href="../people.html">People</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../resources.html">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- IMPORTANT: for person pages we don't want the 2-col homepage grid -->
+  <main class="layout layout--person">
+
+    <!-- PROFILE band (small solid band, 5-col grid = gutter + 4 pillars) -->
+    <section class="profile-band" aria-label="Profile">
+      <div class="profile-wrap">
+        <div class="profile-grid">
+
+          <!-- vertical label in the gutter -->
+          <div class="pillars-label" aria-hidden="true">PROFILE</div>
+
+          <!-- pillar 1 -->
+          <div class="profile-photo">
+            <img class="profile-img" src="../assets/bios/ReechaS.jpg" alt="Portrait of Reecha Sofat">
+          </div>
+
+          <!-- pillars 2–4 -->
+          <div class="profile-text">
+            <h1 class="profile-name">Professor Reecha Sofat</h1>
+            <div class="profile-role">Head of group</div>
+            <div class="profile-affil">University of Liverpool</div>
+
+            <p class="profile-bio">Short bio here…</p>
+
+            <div class="profile-links">
+              <!-- reuse your existing link style -->
+              <a class="news-read" href="#" target="_blank" rel="noopener">ORCID</a>
+              <a class="news-read" href="#" target="_blank" rel="noopener">SCHOLAR</a>
+              <a class="news-read" href="mailto:">EMAIL</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS (normal background; grid like Publications page; starts at 2nd pillar) -->
+    <section class="person-pubs" aria-label="Publications">
+      <div class="person-pubsgrid2">
+
+        <!-- optional title block on the left (you can remove if you want) -->
+        <div class="person-pubstitleblock2">
+          <h2 class="projects-title">Publications</h2>
+        </div>
+
+        <!-- grid starts at 2nd pillar -->
+        <div class="pubs-grid person-pubs-cards">
+
+          <a class="pub-card" href="https://doi.org/10.1111/dom.70353" target="_blank" rel="noopener">
+            <div class="pub-top">
+              <div class="pub-date">2025</div>
+              <div class="pub-cta">READ</div>
+            </div>
+            <div class="pub-title">Disentangling the relationship between glucose, insulin and brain health: A UK Biobank study</div>
+            <div class="pub-journal">Diabetes, Obesity &amp; Metabolism</div>
+          </a>
+
+          <a class="pub-card" href="https://doi.org/10.1136/bmjmed-2023-000760" target="_blank" rel="noopener">
+            <div class="pub-top">
+              <div class="pub-date">2024</div>
+              <div class="pub-cta">READ</div>
+            </div>
+            <div class="pub-title">Use of sodium valproate and other antiseizure drug treatments in England and Wales…</div>
+            <div class="pub-journal">BMJ Medicine</div>
+          </a>  
+
+          <a class="pub-card" href="https://doi.org/10.1371/journal.pmed.1004485" target="_blank" rel="noopener">
+            <div class="pub-top">
+              <div class="pub-date">2024</div>
+              <div class="pub-cta">READ</div>
+            </div>
+            <div class="pub-title">Routine measurement of cardiometabolic disease risk factors in primary care…</div>
+            <div class="pub-journal">PLOS Medicine</div>
+          </a>
+
+          <a class="pub-card" href="https://doi.org/10.1016/j.lanepe.2023.100763" target="_blank" rel="noopener">
+            <div class="pub-top">
+              <div class="pub-date">2023</div>
+              <div class="pub-cta">READ</div>
+            </div>
+            <div class="pub-title">Prevalence of chronic pain/analgesic use in children &amp; long-term outcomes…</div>
+            <div class="pub-journal">The Lancet Regional Health – Europe</div>
+          </a>
+    
+        </div>
+
+        <div class="pubs-all-link person-pubs-all2">
+          <a href="#" target="_blank" rel="noopener">All publications →</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FULL-BLEED band: 4 pillars, 2+2 split -->
+    <section class="skills-band" aria-label="Skills and expertise">
+	    <div class="skills-wrap">
+		    <div class="skills-grid">
+
+			    <!-- gutter: vertical label -->
+			    <div class="skills-vertical" aria-hidden="true">Skills &amp;</div>
+
+			    <!-- pillars 1–2 title -->
+			    <div class="skills-titleblock">
+				    <h2 class="projects-title">Expertise</h2>
+			    </div>
+
+			    <!-- pillars 3–4 title -->
+			    <div class="skills-right-title">
+				    <h2 class="projects-title">Collaborators</h2>
+			    </div>
+
+			    <!-- pillars 1–2: square tiles -->
+			    <div class="skills-tiles">
+				    <div class="skill-tile">
+					    <div class="skill-title">Clinical pharmacology</div>
+					    <div class="skill-bullets">
+						    <div>Drug safety</div>
+					    </div>
+				    </div>
+
+				    <div class="skill-tile">
+					    <div class="skill-title">Domain Knowledge</div>
+					    <div class="skill-bullets">
+						    <div>Healthcare data: pharmacology, epidemiology</div>
+					    </div>
+				    </div>
+			    </div>
+
+			    <!-- pillars 3–4: collaborators list -->
+			    <div class="skills-right skills-right--list">
+				    <div class="skills-collab-list">
+					    <a class="project-item" href="#" target="_blank" rel="noopener">
+						    <div class="project-name">BHF Data Science Centre</div>
+						    <div class="project-meta">Partnership / data access</div>
+					    </a>
+
+					    <!-- <a class="project-item" href="#" target="_blank" rel="noopener">
+						    <div class="project-name">University of Liverpool</div>
+						    <div class="project-meta">Affiliation</div>
+					    </a> -->
+
+					    <a class="project-item" href="#" target="_blank" rel="noopener">
+						    <div class="project-name">UCLH</div>
+						    <div class="project-meta">Clinical collaboration</div>
+					    </a>
+				    </div>
+			    </div>
+          
+		    </div>
+	    </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-left">© <span id="year"></span> MetRX</div>
+    <button class="footer-toggle" id="themeToggle" type="button" aria-label="Toggle theme">Dark</button>
+    <div class="footer-right">Healthcare · Data · Evidence</div>
+  </footer>
+
+</div>
+
+<script>
+  const html = document.documentElement;
+  const toggle = document.getElementById("themeToggle");
+  const KEY = "metrx-theme";
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+  toggle.textContent = (html.dataset.theme === "dark") ? "Light" : "Dark";
+
+  toggle.addEventListener("click", () => {
+    const next = (html.dataset.theme === "dark") ? "light" : "dark";
+    html.dataset.theme = next;
+    localStorage.setItem(KEY, next);
+    toggle.textContent = (next === "dark") ? "Light" : "Dark";
+  });
+
+  const navToggle = document.getElementById("navToggle");
+  const siteNav = document.getElementById("siteNav");
+  if (navToggle && siteNav) {
+    navToggle.addEventListener("click", () => {
+      const open = siteNav.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    document.addEventListener("click", (e) => {
+      if (!siteNav.contains(e.target) && !navToggle.contains(e.target)) {
+        siteNav.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,444 @@
+/* =========================================================
+   MetRX — Person page styles only
+   ========================================================= */
+
+/* =========================================================
+   PERSON: Profile band
+   ========================================================= */
+
+.profile-band{
+	grid-column: 1 / -1;
+
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	width: 100vw;
+
+	height: 410px;
+	background: var(--panel);
+	padding: 46px 0;
+	margin-top: 18px;
+}
+
+.profile-wrap{
+	max-width: var(--page-max);
+	margin: 0 auto;
+	padding: 0 var(--page-pad-x);
+}
+
+.profile-grid{
+	display: grid;
+	grid-template-columns: var(--themes-gutter) repeat(4, minmax(0, 1fr));
+	gap: 26px;
+	align-items: start;
+}
+
+.profile-photo{
+	grid-column: 2 / span 1;
+	padding-top: var(--pillar-top);
+}
+
+.profile-img{
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	border-radius: 18px;
+	display: block;
+	background: rgba(0,0,0,0.04);
+}
+
+.profile-text{
+	grid-column: 3 / span 3;
+	padding-top: var(--pillar-top);
+}
+
+.profile-name{
+	margin: 0 0 8px;
+	font-size: clamp(28px, 3vw, 40px);
+	line-height: 1.05;
+	letter-spacing: -0.02em;
+	color: var(--text);
+}
+
+.profile-role{
+	font-size: 16px;
+	color: var(--muted);
+	margin-top: 2px;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+.profile-affil{
+	margin-top: 10px;
+	font-size: 16px;
+	color: var(--text);
+	opacity: 0.85;
+}
+
+.profile-bio{
+	margin: 14px 0 0;
+	font-size: 18px;
+	line-height: 1.5;
+	color: var(--muted);
+	max-width: 70ch;
+}
+
+.profile-links{
+	margin-top: 14px;
+	display: flex;
+	gap: 14px;
+	flex-wrap: wrap;
+    color: var(--highlight);
+}
+
+
+/* =========================================================
+   PERSON: Publications (normal background)
+   ========================================================= */
+
+.person-pubs{ grid-column: 1 / -1; }
+
+.person-pubsgrid2{
+	display: grid;
+	grid-template-columns: var(--themes-gutter) repeat(4, minmax(0, 1fr));
+	gap: 26px;
+	align-items: start;
+}
+
+.person-pubstitleblock2{
+	grid-column: 1 / span 2;
+	padding-top: var(--pillar-top);
+}
+
+.person-pubs-cards{
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-column: 3 / 6;
+	padding-top: var(--pillar-top);
+}
+
+.person-pubs-all2{
+	grid-column: 3 / 6;
+	margin-top: 6px;
+    color: var(--text);
+	text-decoration: none;
+    font-size: 18px;
+    justify-self: end;        /* push to the right edge of that grid */
+	text-align: right;
+}
+
+.person-pubs-all2 a:hover{
+	color: var(--highlight);
+}
+
+/* Force "All publications" to never go purple */
+.pubs-all-link a:link,
+.pubs-all-link a:visited{
+	color: var(--text);
+	text-decoration: none;
+}
+
+.pubs-all-link a:hover,
+.pubs-all-link a:focus-visible{
+	color: var(--highlight);
+}
+
+
+/* =========================================================
+   PERSON: Skills band (full-bleed)
+   ========================================================= */
+
+.skills-band{
+	grid-column: 1 / -1;
+
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	width: 100vw;
+
+	background: var(--panel);
+	padding: 70px 0;
+	margin-top: 40px;
+}
+
+.skills-wrap{
+	max-width: var(--page-max);
+	margin: 0 auto;
+	padding: 0 var(--page-pad-x);
+}
+
+.skills-grid{
+	display: grid;
+	grid-template-columns: var(--themes-gutter) repeat(4, minmax(0, 1fr));
+	gap: 26px;
+	row-gap: 18px;
+
+	/* One single vertical rhythm for the whole section */
+	padding-top: var(--pillar-top);
+
+	/* Key: rows are defined by their content */
+	grid-template-areas:
+		"label head head headright headright"
+		"label tiles tiles right right";
+
+	align-items: start;
+}
+
+/* ----- Left vertical label (gutter) ----- */
+.skills-vertical{
+	grid-area: label;
+
+	font-size: 54px;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	color: var(--highlight);
+	opacity: 0.95;
+	line-height: 1;
+
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+	transform: rotate(180deg);
+
+	margin: 0; /* kill default spacing */
+}
+
+/* ----- Titles row ----- */
+.skills-titleblock{
+	grid-area: head;
+	margin: 0;
+}
+
+.skills-right-title{
+	grid-area: headright;
+	margin: 0;
+}
+
+/* Ensure titles don’t push layout with default margins */
+.skills-titleblock .projects-title,
+.skills-right-title .projects-title{
+	margin: 0;
+	white-space: nowrap;
+}
+
+/* ----- Tiles (pillars 1–2) ----- */
+.skills-tiles{
+	grid-area: tiles;
+
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 26px;
+
+	/* Important: make row-2 items define a shared height */
+	align-self: stretch;
+}
+
+.skill-tile{
+	border-radius: 18px;
+	background: rgba(255,255,255,0.55);
+	padding: 16px 18px;
+
+	/* aspect-ratio: 1 / 1; */
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+[data-theme="dark"] .skill-tile{
+	background: rgba(0,0,0,0.18);
+}
+
+/* Tile typography */
+.skill-title{
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--text);
+	margin: 0 0 12px;
+}
+
+.skill-bullets{
+	display: grid;
+	gap: 10px;
+	font-size: 16px;
+	line-height: 1.45;
+	color: var(--muted);
+	font-weight: 400;
+	margin: 0;
+}
+.skill-bullets > div{
+	position: relative;
+	padding-left: 14px;
+}
+.skill-bullets > div::before{
+	content: "•";
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: var(--muted);
+}
+
+/* ----- Right content area (pillars 3–4) ----- */
+.skills-right{
+	grid-area: right;
+
+	/* THIS is what makes image height match tiles row height */
+	align-self: stretch;
+	/* height: 100%; */
+    min-height: 0;
+}
+
+/* Right variant A: collaborators list */
+.skills-right--list{
+	display: grid;
+	align-content: start;
+	gap: 14px;
+}
+
+.skills-collab-list{
+	display: grid;
+	gap: 14px;
+}
+
+/* Use your existing project-item look, just ensure full width + nice hover */
+.skills-collab-list .project-item{
+	width: 100%;
+}
+
+/* Right variant B: image */
+.skills-right--image{
+	position: relative;
+	border-radius: 18px;
+	overflow: hidden;
+	background: rgba(255,255,255,0.55);
+	height: 100%;          /* match row height (driven by tiles) */
+	min-height: 0;
+}
+
+[data-theme="dark"] .skills-right--image{
+	background: rgba(0,0,0,0.18);
+}
+
+/* KEY: absolute image fill => image doesn't affect layout height */
+.skills-right--image img{
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+/* Caption stays as-is */
+.skills-caption{
+	position: absolute;
+	right: 12px;
+	bottom: 12px;
+	pointer-events: none;
+}
+
+.skills-caption-text{
+	display: inline-block;
+	color: rgba(255,255,255,0.88);
+	font-size: 10px;
+	line-height: 1;
+
+	/* writing-mode: vertical-rl; 
+    text-orientation: mixed;
+	transform: rotate(180deg); */
+
+	padding: 4px 4px;
+	background: rgba(0,0,0,0.20);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+}
+
+/* Responsive */
+@media (max-width: 1100px){
+	.skills-grid{
+		grid-template-columns: var(--themes-gutter) repeat(2, minmax(0, 1fr));
+		grid-template-areas:
+			"label head head"
+			"label headright headright"
+			"label tiles tiles"
+			"label right right";
+	}
+
+	.skills-tiles{
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.skill-tile{
+		aspect-ratio: auto;
+	}
+}
+
+@media (max-width: 700px){
+	.skills-grid{
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"label"
+			"head"
+			"headright"
+			"tiles"
+			"right";
+		padding-top: 0;
+	}
+
+	.skills-vertical{
+		writing-mode: horizontal-tb;
+		transform: none;
+		font-size: 28px;
+	}
+
+	.skills-tiles{
+		grid-template-columns: 1fr;
+	}
+}
+
+
+/* =========================================================
+   PERSON: Responsive
+   ========================================================= */
+
+@media (max-width: 1100px){
+	.profile-grid,
+	.person-pubsgrid2,
+	.skills-grid{
+		grid-template-columns: var(--themes-gutter) repeat(2, minmax(0, 1fr));
+	}
+
+	.profile-photo,
+	.profile-text{ grid-column: 1 / -1; }
+
+	.person-pubstitleblock2,
+	.person-pubs-cards,
+	.person-pubs-all2{ grid-column: 1 / -1; }
+    .person-pubs-all2{ justify-self: start; text-align: left; }
+
+	.skills-titleblock{ grid-column: 1 / -1; }
+	.skills-tiles{ grid-column: 1 / -1; }
+	.skills-image{ grid-column: 1 / -1; min-height: 320px; }
+	.skill-tile{ aspect-ratio: auto; }
+    
+}
+
+@media (max-width: 700px){
+	.profile-grid,
+	.person-pubsgrid2,
+	.skills-grid{
+		grid-template-columns: 1fr;
+	}
+
+	.skills-vertical{
+		writing-mode: horizontal-tb;
+		transform: none;
+		font-size: 28px;
+        opacity: 0.95;
+	}
+	.skills-titleblock{ grid-column: 1 / -1; }
+	.skills-tiles{ grid-template-columns: 1fr; }
+}

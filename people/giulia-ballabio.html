@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MetRX · Professor Reecha Sofat</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="person.css">
+
+  <script>
+    (function () {
+      try {
+        const t = localStorage.getItem("metrx-theme");
+        if (t === "dark" || t === "light") document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body>
+<div class="page">
+
+  <header class="header">
+    <a class="brand" href="../index.html" aria-label="MetRX home">
+      <span class="dot" aria-hidden="true">●</span> MetRX
+    </a>
+
+    <div class="navwrap">
+      <button class="nav-toggle" id="navToggle" type="button" aria-controls="siteNav" aria-expanded="false">
+        Menu <span class="nav-toggle-icon" aria-hidden="true"></span>
+      </button>
+
+      <nav class="topnav" id="siteNav" aria-label="Primary">
+        <a href="../research.html">Research</a>
+        <a class="is-active" href="../people.html">People</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../resources.html">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- IMPORTANT: for person pages we don't want the 2-col homepage grid -->
+  <main class="layout layout--person">
+
+    <!-- PROFILE band (small solid band, 5-col grid = gutter + 4 pillars) -->
+    <section class="profile-band" aria-label="Profile">
+      <div class="profile-wrap">
+        <div class="profile-grid">
+
+          <!-- vertical label in the gutter -->
+          <div class="pillars-label" aria-hidden="true">PROFILE</div>
+
+          <!-- pillar 1 -->
+          <div class="profile-photo">
+            <img class="profile-img" src="../assets/bios/GiuliaB.jpg" alt="Portrait of Giulia Ballabio">
+          </div>
+
+          <!-- pillars 2–4 -->
+          <div class="profile-text">
+            <div class="profile-role">Postdoctoral Researcher</div>
+            <h1 class="profile-name">Dr Giulia Ballabio</h1>
+            <div class="profile-affil">UCL Hospital NHS Foundation Trust & University of Liverpool</div>
+
+            <p class="profile-bio">Theoretical astrophysicist with extensive experience in computational modelling, 
+                data analysis, and programming, now applying these skills to healthcare innovation. 
+                Currently applying these methods to healthcare, leveraging large-scale datasets to study treatment efficacy, 
+                drug safety, and precision medicine.</p>
+
+            <div class="profile-links">
+              <!-- reuse your existing link style -->
+              <a class="news-read" href="https://orcid.org/0000-0002-4687-2133" target="_blank" rel="noopener">ORCID</a>
+              <a class="news-read" href="https://github.com/giuliaballabio" target="_blank" rel="noopener">GITHUB</a>
+              <a class="news-read" href="mailto:g.ballabio@liverpool.ac.uk">EMAIL</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS (normal background; grid like Publications page; starts at 2nd pillar) -->
+    <section class="person-pubs" aria-label="Publications">
+      <div class="person-pubsgrid2">
+
+        <!-- optional title block on the left (you can remove if you want) -->
+        <div class="person-pubstitleblock2">
+          <h2 class="projects-title">Publications</h2>
+        </div>
+
+        <!-- grid starts at 2nd pillar -->
+        <div class="pubs-grid person-pubs-cards">
+
+			<a class="pub-card"
+			   href="https://ui.adsabs.harvard.edu/search/q=title%3A%22Using%20EUV%20driven%20external%20photoevaporation%20to%20test%20viscous%20evolution%20of%20protoplanetary%20discs%22%20author%3A%28%22Ballabio%2C%20Giulia%22%29&sort=date%20desc"
+			   target="_blank" rel="noopener" aria-label="Open publication">
+				<div class="pub-top">
+					<div class="pub-date">2025</div>
+					<div class="pub-cta">READ</div>
+				</div>
+				<div class="pub-title">Using EUV driven external photoevaporation to test viscous evolution of protoplanetary discs</div>
+				<div class="pub-journal">MNRAS</div>
+                <div class="pub-authors">Ballabio G. &amp; Owen J.</div>
+			</a>
+
+			<a class="pub-card"
+			   href="https://ui.adsabs.harvard.edu/search/q=title%3A%22Understanding%20helium%20absorption%20in%20atmospheric%20escape%22%20author%3A%28%22Ballabio%2C%20Giulia%22%29&sort=date%20desc"
+			   target="_blank" rel="noopener" aria-label="Open publication">
+				<div class="pub-top">
+					<div class="pub-date">2025</div>
+					<div class="pub-cta">READ</div>
+				</div>
+				<div class="pub-title">Understanding helium absorption in atmospheric escape</div>
+				<div class="pub-journal">MNRAS</div>
+                <div class="pub-authors">Ballabio G. &amp; Owen J.</div>
+			</a>
+
+			<a class="pub-card"
+			   href="https://ui.adsabs.harvard.edu/search/q=title%3A%22Modelling%20JWST%20MIRI-MRS%20Observations%20of%20T%20Cha%3A%20Mid-IR%20Noble%20Gas%20Emission%20Tracing%20a%20Dense%20Disk%20Wind%22%20author%3A%28%22Ballabio%2C%20Giulia%22%29&sort=date%20desc"
+			   target="_blank" rel="noopener" aria-label="Open publication">
+				<div class="pub-top">
+					<div class="pub-date">2024</div>
+					<div class="pub-cta">READ</div>
+				</div>
+				<div class="pub-title">Modelling JWST MIRI-MRS Observations of T Cha: Mid-IR Noble Gas Emission Tracing a Dense Disk Wind</div>
+				<div class="pub-journal">AJ</div>
+                <div class="pub-authors">Sellek A., Bajaj N., Pascucci I., incl. Ballabio G. et al.</div>
+			</a>
+
+			<a class="pub-card"
+			   href="https://ui.adsabs.harvard.edu/search/q=title%3A%22OI%206300%20emission%20as%20a%20probe%20of%20external%20photoevaporation%22%20author%3A%28%22Ballabio%2C%20Giulia%22%29&sort=date%20desc"
+			   target="_blank" rel="noopener" aria-label="Open publication">
+				<div class="pub-top">
+					<div class="pub-date">2023</div>
+					<div class="pub-cta">READ</div>
+				</div>
+				<div class="pub-title">[OI] 6300 Å emission as a probe of external photoevaporation</div>
+				<div class="pub-journal">MNRAS</div>
+                <div class="pub-authors">Ballabio G., Haworth T. J. &amp; Henney W. J.</div>
+			</a>
+
+			<a class="pub-card"
+			   href="https://ui.adsabs.harvard.edu/search/q=title%3A%22HD%20143006%3A%20circumbinary%20planet%20or%20misaligned%20disc%3F%22%20author%3A%28%22Ballabio%2C%20Giulia%22%29&sort=date%20desc"
+			   target="_blank" rel="noopener" aria-label="Open publication">
+				<div class="pub-top">
+					<div class="pub-date">2021</div>
+					<div class="pub-cta">READ</div>
+				</div>
+				<div class="pub-title">HD 143006: circumbinary planet or misaligned disc?</div>
+				<div class="pub-journal">MNRAS</div>
+                <div class="pub-authors">Ballabio G. et al.</div>
+			</a>
+
+			<a class="pub-card"
+			   href="https://ui.adsabs.harvard.edu/search/q=title%3A%22The%20Evolution%20of%20Disk%20Winds%20from%20a%20Combined%20Study%20of%20Optical%20and%20Infrared%20Forbidden%20Lines%22%20author%3A%28%22Ballabio%2C%20Giulia%22%29&sort=date%20desc"
+			   target="_blank" rel="noopener" aria-label="Open publication">
+				<div class="pub-top">
+					<div class="pub-date">2020</div>
+					<div class="pub-cta">READ</div>
+				</div>
+				<div class="pub-title">The Evolution of Disk Winds from a Combined Study of Optical and Infrared Forbidden Lines</div>
+				<div class="pub-journal">ApJ</div>
+                <div class="pub-authors">Pascucci I., Banzatti A., incl. Ballabio G. et al.</div>
+			</a>
+
+			<a class="pub-card"
+			   href="https://ui.adsabs.harvard.edu/search/q=title%3A%22Forbidden%20line%20diagnostics%20of%20photoevaporative%20disc%20winds%22%20author%3A%28%22Ballabio%2C%20Giulia%22%29&sort=date%20desc"
+			   target="_blank" rel="noopener" aria-label="Open publication">
+				<div class="pub-top">
+					<div class="pub-date">2020</div>
+					<div class="pub-cta">READ</div>
+				</div>
+				<div class="pub-title">Forbidden line diagnostics of photoevaporative disc winds</div>
+				<div class="pub-journal">MNRAS</div>
+                <div class="pub-authors">Ballabio G., Alexander R. D., &amp; Clarke C. J.</div>
+			</a>
+
+		</div>
+
+		<div class="pubs-all-link person-pubs-all2">
+			<a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=database%3A%20astronomy&q=author%3A(%22Ballabio%2C%20Giulia%22)&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+			   target="_blank" rel="noopener">
+				All publications →
+			</a>
+		</div>
+
+      </div>
+    </section>
+
+    <!-- FULL-BLEED band: 4 pillars, 2+2 split -->
+    <section class="skills-band" aria-label="Skills and expertise">
+	    <div class="skills-wrap">
+		    <div class="skills-grid">
+
+			    <div class="skills-vertical" aria-hidden="true">Skills &amp;</div>
+
+			    <div class="skills-titleblock">
+				    <h2 class="projects-title">Expertise</h2>
+			    </div>
+
+			    <!-- NOTE: omit .skills-right-title entirely -->
+
+			    <div class="skills-tiles">
+				    <div class="skill-tile">
+					    <div class="skill-title">Programming &amp; Data Science</div>
+					    <div class="skill-bullets">
+						    <div>Python, R, Git, Fortran, C, Bash</div>
+						    <div>Big data workflows, HPC environments</div>
+					    </div>
+				    </div>
+
+				    <div class="skill-tile">
+					    <div class="skill-title">Domain Knowledge</div>
+					    <div class="skill-bullets">
+						    <div>Healthcare data: pharmacology, epidemiology</div>
+						    <div>Astrophysics: modelling, simulations</div>
+					    </div>
+				    </div>
+				</div>
+			</div>
+
+			<div class="skills-right skills-right--image">
+				<img src="../assets/img/giulia-bg.jpg" alt="Milky Way night sky">
+				<div class="skills-caption" aria-hidden="true">
+					<span class="skills-caption-text">Atacama Desert, Chile © G. Ballabio</span>
+				</div>
+			</div>
+		</div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-left">© <span id="year"></span> MetRX</div>
+    <button class="footer-toggle" id="themeToggle" type="button" aria-label="Toggle theme">Dark</button>
+    <div class="footer-right">Healthcare · Data · Evidence</div>
+  </footer>
+
+</div>
+
+<script>
+  const html = document.documentElement;
+  const toggle = document.getElementById("themeToggle");
+  const KEY = "metrx-theme";
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+  toggle.textContent = (html.dataset.theme === "dark") ? "Light" : "Dark";
+
+  toggle.addEventListener("click", () => {
+    const next = (html.dataset.theme === "dark") ? "light" : "dark";
+    html.dataset.theme = next;
+    localStorage.setItem(KEY, next);
+    toggle.textContent = (next === "dark") ? "Light" : "Dark";
+  });
+
+  const navToggle = document.getElementById("navToggle");
+  const siteNav = document.getElementById("siteNav");
+  if (navToggle && siteNav) {
+    navToggle.addEventListener("click", () => {
+      const open = siteNav.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    document.addEventListener("click", (e) => {
+      if (!siteNav.contains(e.target) && !navToggle.contains(e.target)) {
+        siteNav.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
