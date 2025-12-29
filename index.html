@@ -1,63 +1,199 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MetRX</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <script>
+    (function () {
+      try {
+        const t = localStorage.getItem("metrx-theme");
+        if (t === "dark" || t === "light") {
+          document.documentElement.dataset.theme = t;
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
+
 <body>
+  <div class="page">
 
-<div class="layout">
+    <header class="header">
+      <a class="brand" href="index.html" aria-label="MetRX home">
+        <span class="dot" aria-hidden="true">●</span>
+        MetRX
+      </a>
 
-  <!-- Sidebar -->
-  <nav class="sidebar">
-    <div class="logo">
-      <img src="logo.png" alt="MetRX logo">
-      <h1>MetRX</h1>
-    </div>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Research</a></li>
-      <li><a href="#">People</a></li>
-      <li><a href="#">Publications</a></li>
-      <li><a href="#">News</a></li>
-      <li><a href="#">Data / Tools</a></li>
-    </ul>
-  </nav>
+      <div class="navwrap">
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="primaryNav">
+          Menu <span class="nav-toggle-icon" aria-hidden="true"></span>
+        </button>
 
-  <!-- Main content -->
-  <main class="content">
-
-    <section class="hero">
-      <h2>Methods for Translational Research in Medicine</h2>
-      <p>
-        MetRX develops data-driven methods for drug treatment evaluation,
-        epidemiology, genetics, and large-scale health data.
-      </p>
-    </section>
-
-    <section class="grid">
-      <div class="card">
-        <h3>Drug Treatments</h3>
-        <p>Mechanistic and data-driven modelling of therapeutic effects.</p>
+        <nav class="topnav" id="primaryNav" aria-label="Primary">
+          <a href="research.html">Research</a>
+          <a href="people.html">People</a>
+          <a href="publications.html">Publications</a>
+          <a href="resources.html">Resources</a>
+        </nav>
       </div>
-      <div class="card">
-        <h3>Epidemiology</h3>
-        <p>Population-scale analysis of disease risk and inequality.</p>
-      </div>
-      <div class="card">
-        <h3>Genetics</h3>
-        <p>Causal inference using Mendelian randomisation and GWAS.</p>
-      </div>
-      <div class="card">
-        <h3>Big Data</h3>
-        <p>Secure pipelines for national-scale health datasets.</p>
-      </div>
-    </section>
+    </header>
 
-  </main>
-</div>
+    <main class="layout">
 
+      <!-- HERO (background band is INSIDE hero so it cannot overlap pillars) -->
+      <section class="hero" aria-label="Intro">
+        <div class="hero-band" aria-hidden="true"></div>
+
+        <div class="hero-caption" aria-label="Image description">
+          <span class="hero-caption-text">Muscle membrane-derived Giant Plasma Membrane Vesicles (GPMVs).</span>
+        </div>
+
+        <div class="hero-glass">
+          <div class="glass-effect" aria-hidden="true"></div>
+          <div class="glass-tint" aria-hidden="true"></div>
+          <div class="glass-shine" aria-hidden="true"></div>
+
+          <div class="glass-content">
+            <h1 class="hero-title">Evidence for<br>modern medicine</h1>
+
+            <p>
+              Welcome to our webpage! MetRX is a multidisciplinary research group working across
+              <span class="hl">epidemiology</span>,
+              <span class="hl">genetics</span>,
+              <span class="hl">drug treatments</span> and
+              <span class="hl">health data science</span>
+              to generate robust, reproducible evidence from large-scale healthcare data.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PILLARS -->
+      <section class="pillars" aria-label="Focus">
+        <div class="pillars-wrap">
+          <div class="pillars-label" aria-hidden="true">FOCUS</div>
+
+          <div class="pillars-grid">
+            <article class="pillar">
+              <h3 class="pillar-title">Drug safety &amp; effectiveness</h3>
+              <p class="pillar-text">Real-world evidence on benefits and harms of medicines across diverse populations.</p>
+            </article>
+
+            <!-- <article class="pillar pillar--image" aria-label="Scalable health data science (image)">
+              <img
+                class="pillar-img"
+                src="assets/img/pills.jpg"
+                alt="Abstract data science / healthcare imagery"
+                loading="lazy"
+              >
+            </article> -->
+
+            <article class="pillar">
+              <h3 class="pillar-title">Population health &amp; inequalities</h3>
+              <p class="pillar-text">Understanding variation in outcomes across communities using linked health and place data.</p>
+            </article>
+
+            <article class="pillar">
+              <h3 class="pillar-title">Genetics &amp; causal inference</h3>
+              <p class="pillar-text">Strengthening inference with genetic instruments and triangulation across methods.</p>
+            </article>
+
+            <article class="pillar">
+              <h3 class="pillar-title">Scalable health data science</h3>
+              <p class="pillar-text">Reproducible, secure pipelines for large-scale analysis with auditable workflows.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="logos-band" aria-label="Affiliations and funders">
+        <div class="logos-inner">
+
+          <a class="logo-tile" href="#" aria-label="MetRX">
+            <img class="logo-img" src="assets/logos/metrx.png" alt="MetRX">
+          </a>
+
+          <a class="logo-tile" href="#" aria-label="University of Liverpool">
+            <img class="logo-img logo-img--no-filter" src="assets/logos/uol.png" alt="University of Liverpool">
+          </a>
+
+          <a class="logo-tile" href="#" aria-label="MHRA">
+            <img class="logo-img" src="assets/logos/mhra.png" alt="MHRA">
+          </a>
+
+          <a class="logo-tile" href="#" aria-label="MHRA">
+            <img class="logo-img" src="assets/logos/nihr.png" alt="MHRA">
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="footer-left">© <span id="year"></span> MetRX</div>
+      <button class="footer-toggle" id="themeToggle" type="button" aria-label="Toggle theme">Dark</button>
+      <div class="footer-right">Healthcare · Data · Evidence</div>
+    </footer>
+
+  </div>
+
+  <script>
+    // Theme + year (persist)
+    const html = document.documentElement;
+    const toggle = document.getElementById("themeToggle");
+    const KEY = "metrx-theme";
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // set initial button label from current theme
+    toggle.textContent = (html.dataset.theme === "dark") ? "Light" : "Dark";
+
+    toggle.addEventListener("click", () => {
+    const isDark = html.dataset.theme === "dark";
+    const next = isDark ? "light" : "dark";
+    html.dataset.theme = next;
+
+    // persist
+    localStorage.setItem(KEY, next);
+
+    // update label
+    toggle.textContent = (next === "dark") ? "Light" : "Dark";
+    });
+
+    // Mobile nav dropdown
+    const navToggle = document.getElementById("navToggle");
+    const primaryNav = document.getElementById("primaryNav");
+
+    navToggle.addEventListener("click", () => {
+      const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+      navToggle.setAttribute("aria-expanded", String(!isOpen));
+      primaryNav.classList.toggle("is-open", !isOpen);
+    });
+
+    // Close on resize back to desktop
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 900) {
+        navToggle.setAttribute("aria-expanded", "false");
+        primaryNav.classList.remove("is-open");
+      }
+    });
+  </script>
+
+  <!-- SVG filter (expanded bounds to avoid clipping artifacts) -->
+  <svg width="0" height="0" aria-hidden="true" focusable="false">
+    <filter id="glass-distortion" x="-40%" y="-40%" width="180%" height="180%" filterUnits="objectBoundingBox">
+      <feTurbulence type="fractalNoise" baseFrequency="0.001 0.005" numOctaves="1" seed="17" result="turbulence"/>
+      <feGaussianBlur in="turbulence" stdDeviation="3" result="softMap"/>
+      <feDisplacementMap in="SourceGraphic" in2="softMap" scale="200" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
 </body>
 </html>

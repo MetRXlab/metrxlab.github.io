@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MetRX · Resources</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    (function () {
+      try {
+        const t = localStorage.getItem("metrx-theme");
+        if (t === "dark" || t === "light") document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body>
+<div class="page">
+
+  <header class="header">
+    <a class="brand" href="index.html" aria-label="MetRX home">
+      <span class="dot" aria-hidden="true">●</span> MetRX
+    </a>
+
+    <div class="navwrap">
+      <button class="nav-toggle" id="navToggle" type="button" aria-controls="siteNav" aria-expanded="false">
+        Menu <span class="nav-toggle-icon" aria-hidden="true"></span>
+      </button>
+
+      <nav class="topnav" id="siteNav" aria-label="Primary">
+        <a href="research.html">Research</a>
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a class="is-active" href="resources.html">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="layout">
+
+    <!-- HERO -->
+    <section class="hero hero--tools" aria-label="Tools intro">
+      <div class="hero-band" aria-hidden="true"></div>
+
+      <div class="hero-glass">
+        <div class="glass-effect" aria-hidden="true"></div>
+        <div class="glass-tint" aria-hidden="true"></div>
+        <div class="glass-shine" aria-hidden="true"></div>
+
+        <div class="glass-content">
+          <h1 class="hero-title">Resources</h1>
+          <p>Reusable code, pipelines, and resources supporting reproducible pharmacoepidemiology and genetic epidemiology.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 pillars: outline icon + title + text -->
+    <section class="tools-section" aria-label="Tools overview">
+      <div class="pillars-wrap">
+        <div class="pillars-label" aria-hidden="true">TOOLS</div>
+
+        <div class="tools-grid">
+          <article class="tool-card">
+            <div class="tool-icon" aria-hidden="true">
+              <img class="tool-icon-img tool-icon-img--themed"
+                   src="assets/icons/genetics.svg"
+                   alt="" loading="lazy">
+            </div>
+            <h3 class="tool-title">MR pipeline</h3>
+            <p class="tool-text">Instrument selection, harmonisation, sensitivity analyses, and reproducible reporting.</p>
+          </article>
+
+          <article class="tool-card">
+            <div class="tool-icon" aria-hidden="true">
+              <img class="tool-icon-img tool-icon-img--themed"
+                   src="assets/icons/barchart.svg"
+                   alt="" loading="lazy">
+            </div>
+            <h3 class="tool-title">EHR cohort modelling</h3>
+            <p class="tool-text">Cohort definitions, time-to-event models, stratification, and transparent covariate handling.</p>
+          </article>
+
+          <article class="tool-card">
+            <div class="tool-icon" aria-hidden="true">
+              <img class="tool-icon-img tool-icon-img--themed"
+                   src="assets/icons/labresearch.svg"
+                   alt="" loading="lazy">
+            </div>
+            <h3 class="tool-title">QC &amp; diagnostics</h3>
+            <p class="tool-text">Consistency checks, missingness summaries, disclosure control, and model diagnostics.</p>
+          </article>
+
+          <article class="tool-card">
+            <div class="tool-icon" aria-hidden="true">
+              <img class="tool-icon-img tool-icon-img--themed"
+                   src="assets/icons/work.svg"
+                   alt="" loading="lazy">
+            </div>
+            <h3 class="tool-title">Reusable templates</h3>
+            <p class="tool-text">Config-driven scripts, plotting utilities, and project scaffolding for fast iteration.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Datasets band (aligned like Research/Publishing fixes) -->
+    <section class="datasets-band" aria-label="Datasets we use">
+      <div class="datasets-wrap">
+        <div class="datasets-grid">
+
+          <div class="datasets-left">
+            <div class="projects-kicker">Datasets we use</div>
+            <h2 class="projects-title">Datasets</h2>
+            <p class="datasets-lede">Examples of the resources we work with across research and method development.</p>
+          </div>
+
+          <div class="datasets-right">
+            <div class="dataset-item">
+              <div class="dataset-name">UK Biobank</div>
+              <div class="dataset-meta">Genetics · Imaging · Linked health records</div>
+            </div>
+
+            <div class="dataset-item">
+              <div class="dataset-name">NHS EHR datasets</div>
+              <div class="dataset-meta">Primary care · Secondary care · Prescribing</div>
+            </div>
+
+            <div class="dataset-item">
+              <div class="dataset-name">Registries &amp; linked sources</div>
+              <div class="dataset-meta">Mortality · Hospital episodes · Disease registries</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Logos -->
+    <section class="logos" aria-label="Affiliations and funders">
+      <div class="logos-inner"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-left">© <span id="year"></span> MetRX</div>
+    <button class="footer-toggle" id="themeToggle" type="button" aria-label="Toggle theme">Dark</button>
+    <div class="footer-right">Healthcare · Data · Evidence</div>
+  </footer>
+
+</div>
+
+<script>
+  const html = document.documentElement;
+  const toggle = document.getElementById("themeToggle");
+  const KEY = "metrx-theme";
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+  toggle.textContent = (html.dataset.theme === "dark") ? "Light" : "Dark";
+
+  toggle.addEventListener("click", () => {
+    const next = (html.dataset.theme === "dark") ? "light" : "dark";
+    html.dataset.theme = next;
+    localStorage.setItem(KEY, next);
+    toggle.textContent = (next === "dark") ? "Light" : "Dark";
+  });
+
+  const navToggle = document.getElementById("navToggle");
+  const siteNav = document.getElementById("siteNav");
+  if (navToggle && siteNav) {
+    navToggle.addEventListener("click", () => {
+      const open = siteNav.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    document.addEventListener("click", (e) => {
+      if (!siteNav.contains(e.target) && !navToggle.contains(e.target)) {
+        siteNav.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+</script>
+
+<svg class="svg-filters" width="0" height="0" aria-hidden="true" focusable="false">
+  <filter id="glass-distortion" x="0%" y="0%" width="100%" height="100%" filterUnits="objectBoundingBox">
+    <feTurbulence type="fractalNoise" baseFrequency="0.001 0.005" numOctaves="1" seed="17" result="turbulence" />
+    <feGaussianBlur in="turbulence" stdDeviation="3" result="softMap" />
+    <feDisplacementMap in="SourceGraphic" in2="softMap" scale="200" xChannelSelector="R" yChannelSelector="G" />
+  </filter>
+</svg>
+
+</body>
+</html>

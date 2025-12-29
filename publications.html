@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MetRX · Publications</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- apply saved theme early -->
+  <script>
+    (function () {
+      try {
+        const t = localStorage.getItem("metrx-theme");
+        if (t === "dark" || t === "light") document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body>
+<div class="page">
+
+  <header class="header">
+    <a class="brand" href="index.html" aria-label="MetRX home">
+      <span class="dot" aria-hidden="true">●</span> MetRX
+    </a>
+
+    <div class="navwrap">
+      <button class="nav-toggle" id="navToggle" type="button" aria-controls="siteNav" aria-expanded="false">
+        Menu <span class="nav-toggle-icon" aria-hidden="true"></span>
+      </button>
+
+      <nav class="topnav" id="siteNav" aria-label="Primary">
+        <a href="research.html">Research</a>
+        <a href="people.html">People</a>
+        <a class="is-active" href="publications.html">Publications</a>
+        <a href="resources.html">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="layout">
+
+    <!-- HERO -->
+    <section class="hero hero--publications" aria-label="Publications intro">
+      <div class="hero-band" aria-hidden="true"></div>
+
+      <div class="hero-caption" aria-label="Image description">
+        <span class="hero-caption-text">Growth of fungi in a petri dish.</span>
+      </div>
+
+      <div class="hero-glass">
+        <div class="glass-effect" aria-hidden="true"></div>
+        <div class="glass-tint" aria-hidden="true"></div>
+        <div class="glass-shine" aria-hidden="true"></div>
+
+        <div class="glass-content">
+          <h1 class="hero-title">Publications</h1>
+          <p>Selected outputs from MetRX across epidemiology, genetics, and real-world evidence.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications grid -->
+    <!-- <section class="pubs-section" aria-label="Selected publications">
+      <div class="pillars-wrap">
+        <div class="pillars-label" aria-hidden="true">PUBLICATIONS</div>
+
+        <div class="pubs-grid">
+          <a class="pub-card" href="#" aria-label="Open publication">
+            <div class="pub-top">
+              <div class="pub-date">2025</div>
+              <div class="pub-cta">READ</div>
+            </div>
+            <div class="pub-title">GLP-1 receptor agonism and dementia-related outcomes</div>
+            <div class="pub-journal">Journal name</div>
+          </a>
+
+          <a class="pub-card" href="#" aria-label="Open publication">
+            <div class="pub-top">
+              <div class="pub-date">2025</div>
+              <div class="pub-cta">READ</div>
+            </div>
+            <div class="pub-title">Inequalities in cardiovascular disease risk across local areas</div>
+            <div class="pub-journal">Journal name</div>
+          </a>
+
+          <a class="pub-card" href="#" aria-label="Open publication">
+            <div class="pub-top">
+              <div class="pub-date">2024</div>
+              <div class="pub-cta">READ</div>
+            </div>
+            <div class="pub-title">Methods for robust causal inference using linked EHR cohorts</div>
+            <div class="pub-journal">Journal name</div>
+          </a>
+
+          <a class="pub-card" href="#" aria-label="Open publication">
+            <div class="pub-top">
+              <div class="pub-date">2024</div>
+              <div class="pub-cta">READ</div>
+            </div>
+            <div class="pub-title">Scalable pipelines for reproducible health data science</div>
+            <div class="pub-journal">Journal name</div>
+          </a>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="pubs-section" aria-label="Selected publications">
+      <div class="pillars-wrap">
+        <div class="pillars-label" aria-hidden="true">PUBLICATIONS</div>
+
+        <div class="pubs-grid" id="pubsGrid" aria-label="Selected publications"></div>
+
+        <script src="publications.js" defer></script>
+      </div>
+    </section>
+
+    <!-- Recent News band (aligned like Research page) -->
+    <section class="pubs-newsband" aria-label="Recent news">
+      <div class="pubs-newswrap">
+        <div class="pubs-newsgrid">
+
+          <div class="pubs-newsleft">
+            <h2 class="projects-title">Recent News<br>&amp; Events</h2>
+            <p class="datasets-lede">News involving MetRX research and activities.</p>
+          </div>
+
+          <div class="pubs-newsright">
+            <div class="news-item">
+              <div class="news-item-top">
+                <div class="news-item-meta">11.02.2026</div>
+
+                <a class="news-read"
+                  href="https://payments.liv.ac.uk/short-courses/short-courses-at-liverpool/faculty-of-health-and-life-sciences"
+                  target="_blank" rel="noopener">
+                  BOOK
+                </a>
+              </div>
+              <div class="news-item-title">UK Biobank RAPid Access </div>
+              <div class="news-item-sub">A one-day, hands-on course to introduce researchers to the UK Biobank Research Analysis Platform (RAP).</div>
+            </div>
+            <div class="news-item">
+              <div class="news-item-top">
+                <div class="news-item-meta">02.10.2025</div>
+
+                <a class="news-read"
+                  href="https://www.bmj.com/content/391/bmj.r2068.long"
+                  target="_blank" rel="noopener">
+                  READ
+                </a>
+              </div>
+              <div class="news-item-title">Paracetamol and pregnancy: the real story is a lack of funding for women’s health research</div>
+              <div class="news-item-sub">BMJ</div>
+            </div>
+            <!-- <div class="news-item">
+              <div class="news-item-top">
+                <div class="news-item-meta">02.10.2025</div>
+
+                <a class="news-read"
+                  href="https://www.bmj.com/content/391/bmj.r2068.long"
+                  target="_blank" rel="noopener">
+                  READ
+                </a>
+              </div>
+              <div class="news-item-title">Paracetamol and pregnancy: the real story is a lack of funding for women’s health research</div>
+              <div class="news-item-sub">BMJ</div>
+            </div> -->
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Logos -->
+    <section class="logos" aria-label="Affiliations and funders">
+      <div class="logos-inner"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-left">© <span id="year"></span> MetRX</div>
+    <button class="footer-toggle" id="themeToggle" type="button" aria-label="Toggle theme">Dark</button>
+    <div class="footer-right">Healthcare · Data · Evidence</div>
+  </footer>
+
+</div>
+
+<script>
+  const html = document.documentElement;
+  const toggle = document.getElementById("themeToggle");
+  const KEY = "metrx-theme";
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+  toggle.textContent = (html.dataset.theme === "dark") ? "Light" : "Dark";
+
+  toggle.addEventListener("click", () => {
+    const next = (html.dataset.theme === "dark") ? "light" : "dark";
+    html.dataset.theme = next;
+    localStorage.setItem(KEY, next);
+    toggle.textContent = (next === "dark") ? "Light" : "Dark";
+  });
+
+  const navToggle = document.getElementById("navToggle");
+  const siteNav = document.getElementById("siteNav");
+  if (navToggle && siteNav) {
+    navToggle.addEventListener("click", () => {
+      const open = siteNav.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    document.addEventListener("click", (e) => {
+      if (!siteNav.contains(e.target) && !navToggle.contains(e.target)) {
+        siteNav.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+</script>
+
+<svg class="svg-filters" width="0" height="0" aria-hidden="true" focusable="false">
+  <filter id="glass-distortion" x="0%" y="0%" width="100%" height="100%" filterUnits="objectBoundingBox">
+    <feTurbulence type="fractalNoise" baseFrequency="0.001 0.005" numOctaves="1" seed="17" result="turbulence" />
+    <feGaussianBlur in="turbulence" stdDeviation="3" result="softMap" />
+    <feDisplacementMap in="SourceGraphic" in2="softMap" scale="200" xChannelSelector="R" yChannelSelector="G" />
+  </filter>
+</svg>
+
+</body>
+</html>

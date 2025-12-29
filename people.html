@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MetRX · People</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    (function () {
+      try {
+        const t = localStorage.getItem("metrx-theme");
+        if (t === "dark" || t === "light") {
+          document.documentElement.dataset.theme = t;
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <header class="header">
+    <a class="brand" href="index.html" aria-label="MetRX home">
+      <span class="dot" aria-hidden="true">●</span> MetRX
+    </a>
+
+    <div class="navwrap">
+      <button class="nav-toggle" id="navToggle" type="button" aria-controls="siteNav" aria-expanded="false">
+        Menu <span class="nav-toggle-icon" aria-hidden="true"></span>
+      </button>
+
+      <nav class="topnav" id="siteNav" aria-label="Primary">
+        <a href="research.html">Research</a>
+        <a class="is-active" href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="resources.html">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main layout (home skeleton: hero -> pillars -> logos) -->
+  <main class="layout">
+
+    <!-- HERO -->
+    <section class="hero hero--people" aria-label="People intro">
+      <div class="hero-band" aria-hidden="true"></div>
+
+      <div class="hero-caption" aria-label="Image description">
+        <span class="hero-caption-text">MRI Scan of Human Brain.</span>
+      </div>
+
+      <div class="hero-glass">
+        <div class="glass-effect" aria-hidden="true"></div>
+        <div class="glass-tint" aria-hidden="true"></div>
+        <div class="glass-shine" aria-hidden="true"></div>
+
+        <div class="glass-content">
+          <h1 class="hero-title">People</h1>
+          <p>
+            We are a multidisciplinary group spanning epidemiology, genetics, clinical pharmacology,
+            and health data science. We work with collaborators across academia, the NHS, and industry.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PILLARS (quick overview) -->
+    <!-- <section class="pillars" aria-label="People overview">
+      <div class="pillars-wrap">
+        <div class="pillars-label">TEAM</div>
+
+        <div class="pillars-grid">
+          <article class="pillar">
+            <h3 class="pillar-title">Leadership</h3>
+            <p class="pillar-text">Strategic direction, partnerships, and translational focus.</p>
+          </article>
+          <article class="pillar">
+            <h3 class="pillar-title">Researchers</h3>
+            <p class="pillar-text">Methods, pipelines, and applied analyses across datasets.</p>
+          </article>
+          <article class="pillar">
+            <h3 class="pillar-title">Clinical collaborators</h3>
+            <p class="pillar-text">Clinical interpretation, phenotype design, and impact.</p>
+          </article>
+          <article class="pillar">
+            <h3 class="pillar-title">Students</h3>
+            <p class="pillar-text">Projects, open-source contributions, and training.</p>
+          </article>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- PEOPLE GRID (same concept as news grid: card with image + top row meta + title) -->
+    <section class="people-page" aria-label="People list">
+      <!-- <div class="section-title">Group</div> -->
+      <div class="pillars-wrap">
+      <div class="pillars-label">OUR TEAM</div>
+
+      <div class="people-grid-cards">
+
+        <!-- Card -->
+        <article class="person-card2">
+          <a class="person-card2-link" href="people/reecha-sofat.html" aria-label="Profile: Head of group">
+            <div class="person-card2-top">
+              <div class="person-card2-role">Head of group</div>
+              <!-- <div class="person-card2-cta">VIEW</div> -->
+            </div>
+
+            <img class="person-card2-img" src="assets/bios/ReechaS.jpg" alt="Portrait of Reecha Sofat">
+
+            <div class="person-card2-name">Professor Reecha Sofat</div>
+            <!-- <div class="person-card2-title">Professor of Clinical Pharmacology</div> -->
+
+            <div class="person-card2-tags">
+              <!-- <span class="pill">Drug safety</span>
+              <span class="pill">Pharmacology</span>
+              <span class="pill">Everything</span> -->
+            </div>
+          </a>
+        </article>
+
+        <!-- Card -->
+        <article class="person-card2">
+          <a class="person-card2-link" href="#" aria-label="Profile: Lecturer">
+            <div class="person-card2-top">
+              <div class="person-card2-role">Senior Lecturer</div>
+              <!-- <div class="person-card2-cta">VIEW</div> -->
+            </div>
+
+            <img class="person-card2-img" src="assets/bios/VickyG.jpg" alt="Portrait of Vicky Garfield">
+
+            <div class="person-card2-name">Dr Vicky Garfield</div>
+            <!-- <div class="person-card2-title">Senior Lecturer in Genetic Epidemiology</div> -->
+
+            <div class="person-card2-tags">
+              <!-- <span class="pill">MR</span>
+              <span class="pill">GWAS</span> -->
+            </div>
+          </a>
+        </article>
+
+        <!-- Card -->
+        <article class="person-card2">
+          <a class="person-card2-link" href="#" aria-label="Profile: Lecturer">
+            <div class="person-card2-top">
+              <div class="person-card2-role">Tenure Track Fellow</div>
+              <!-- <div class="person-card2-cta">VIEW</div> -->
+            </div>
+
+            <img class="person-card2-img" src="assets/bios/CarolineD.jpeg" alt="Portrait of Caroline Dale">
+
+            <div class="person-card2-name">Dr Caroline Dale</div>
+            <!-- <div class="person-card2-title">Tenure Track Fellow</div> -->
+
+            <div class="person-card2-tags">
+              <!-- <span class="pill">Epidemiology</span> -->
+            </div>
+          </a>
+        </article>
+
+        <!-- Card -->
+        <article class="person-card2">
+          <a class="person-card2-link" href="#" aria-label="Profile: Lecturer">
+            <div class="person-card2-top">
+              <div class="person-card2-role">Lecturer</div>
+              <!-- <div class="person-card2-cta">VIEW</div> -->
+            </div>
+
+            <img class="person-card2-img" src="assets/bios/PardisB.png" alt="Portrait of Pardis Biglarbeigi">
+
+            <div class="person-card2-name">Dr Pardis Biglarbeigi</div>
+            <!-- <div class="person-card2-title">Lecturer in Health Data Science</div> -->
+
+            <div class="person-card2-tags">
+              <!-- <span class="pill">time-series analysis</span>
+              <span class="pill">signal/image processing</span>
+              <span class="pill">AI/Machine Learning</span> -->
+            </div>
+          </a>
+        </article>
+
+        <!-- Card -->
+        <article class="person-card2">
+          <a class="person-card2-link" href="#" aria-label="Profile: Postdoc">
+            <div class="person-card2-top">
+              <div class="person-card2-role">Research Software Engineer</div>
+              <!-- <div class="person-card2-cta">VIEW</div> -->
+            </div>
+
+            <img class="person-card2-img" src="assets/bios/RohanT.jpg" alt="Portrait of Rohan Takhar">
+
+            <div class="person-card2-name">Mr Rohan Takhar</div>
+            <!-- <div class="person-card2-title">Research Software Engineer</div> -->
+
+            <div class="person-card2-tags">
+              <!-- <span class="pill">Data Science</span>
+              <span class="pill">Numerical Modelling</span> -->
+            </div>
+          </a>
+        </article>
+
+        <!-- Card -->
+        <article class="person-card2">
+          <a class="person-card2-link" href="#" aria-label="Profile: Postdoc">
+            <div class="person-card2-top">
+              <div class="person-card2-role">Postdoctoral Researcher</div>
+              <!-- <div class="person-card2-cta">VIEW</div> -->
+            </div>
+
+            <img class="person-card2-img" src="assets/bios/FrancescaZ.jpeg" alt="Portrait of Francesca Zaccagnino">
+
+            <div class="person-card2-name">Dr Francesca Zaccagnino</div>
+            <!-- <div class="person-card2-title">Postdoctoral Researcher</div> -->
+
+            <div class="person-card2-tags">
+              <!-- <span class="pill">Data Science</span>
+              <span class="pill">Numerical Modelling</span> -->
+            </div>
+          </a>
+        </article>
+
+        <!-- Card -->
+        <article class="person-card2">
+          <a class="person-card2-link" href="#" aria-label="Profile: Postdoc">
+            <div class="person-card2-top">
+              <div class="person-card2-role">Postdoctoral Researcher</div>
+              <!-- <div class="person-card2-cta">VIEW</div> -->
+            </div>
+
+            <img class="person-card2-img" src="assets/bios/AndrewM.jpg" alt="Portrait of Andrew Mason">
+
+            <div class="person-card2-name">Dr Andrew Mason</div>
+            <!-- <div class="person-card2-title">Postdoctoral Researcher</div> -->
+
+            <div class="person-card2-tags">
+              <!-- <span class="pill">Data Science</span>
+              <span class="pill">Numerical Modelling</span> -->
+            </div>
+          </a>
+        </article>
+
+        <!-- Card -->
+        <article class="person-card2">
+          <a class="person-card2-link" href="people/giulia-ballabio.html" aria-label="Profile: Postdoc">
+            <div class="person-card2-top">
+              <div class="person-card2-role">Postdoctoral Researcher</div>
+              <!-- <div class="person-card2-cta">VIEW</div> -->
+            </div>
+
+            <img class="person-card2-img" src="assets/bios/GiuliaB.jpg" alt="Portrait of Giulia Ballabio">
+
+            <div class="person-card2-name">Dr Giulia Ballabio</div>
+            <!-- <div class="person-card2-title">Postdoctoral Researcher</div> -->
+
+            <div class="person-card2-tags">
+              <!-- <span class="pill">Data Science</span>
+              <span class="pill">Numerical Modelling</span> -->
+            </div>
+          </a>
+        </article>
+
+        <!-- Card -->
+        <article class="person-card2">
+          <a class="person-card2-link" href="#" aria-label="Profile: PhD student">
+            <div class="person-card2-top">
+              <div class="person-card2-role">PhD student</div>
+              <!-- <div class="person-card2-cta">VIEW</div> -->
+            </div>
+
+            <img class="person-card2-img" src="assets/bios/AlexD.jpg" alt="Portrait of Alexander Davie">
+
+            <div class="person-card2-name">Alexander Davie</div>
+            <!-- <div class="person-card2-title">PhD Student</div> -->
+
+            <div class="person-card2-tags">
+              <!-- <span class="pill">Biotechnology</span> -->
+            </div>
+          </a>
+        </article>
+
+        <!-- Card -->
+        <article class="person-card2">
+          <a class="person-card2-link" href="#" aria-label="Profile: PhD student">
+            <div class="person-card2-top">
+              <div class="person-card2-role">PhD student</div>
+              <!-- <div class="person-card2-cta">VIEW</div> -->
+            </div>
+
+            <img class="person-card2-img" src="assets/bios/JaveriaK.jpg" alt="Portrait of Javeria Khan">
+
+            <div class="person-card2-name">Javeria Khan</div>
+            <!-- <div class="person-card2-title">PhD Student</div> -->
+
+            <div class="person-card2-tags">
+              <!-- <span class="pill">Dentistry</span> -->
+            </div>
+          </a>
+        </article>
+
+        <!-- Card -->
+        <article class="person-card2">
+          <a class="person-card2-link" href="#" aria-label="Profile: Admin">
+            <div class="person-card2-top">
+              <div class="person-card2-role">Admin</div>
+              <!-- <div class="person-card2-cta">VIEW</div> -->
+            </div>
+
+            <img class="person-card2-img" src="assets/bios/AnitaW.jpg" alt="Portrait of Anita Waterman">
+
+            <div class="person-card2-name">Anita Waterman</div>
+            <!-- <div class="person-card2-title">PhD Student</div> -->
+
+            <div class="person-card2-tags">
+              <!-- <span class="pill">Dentistry</span> -->
+            </div>
+          </a>
+        </article>
+
+        <!-- Card -->
+        <article class="person-card2">
+          <a class="person-card2-link" href="#" aria-label="Profile: Admin">
+            <div class="person-card2-top">
+              <div class="person-card2-role">Admin</div>
+              <!-- <div class="person-card2-cta">VIEW</div> -->
+            </div>
+
+            <img class="person-card2-img" src="assets/bios/BethanyP.jpg" alt="Portrait of Bethany Peterson">
+
+            <div class="person-card2-name">Bethany Peterson</div>
+            <!-- <div class="person-card2-title">PhD Student</div> -->
+
+            <div class="person-card2-tags">
+              <!-- <span class="pill">Dentistry</span> -->
+            </div>
+          </a>
+        </article>
+
+      </div>
+      </div>
+    </section>
+
+    <!-- COLLABORATORS GRID  -->
+    <section class="people-page" aria-label="People list">
+      <!-- <div class="section-title">Group</div> -->
+      <div class="pillars-wrap">
+      <div class="pillars-label">COLLABORATORS</div>
+
+      <div class="people-grid-cards">
+
+        <!-- Card -->
+        <article class="person-card2">
+          <a class="person-card2-link" href="#" aria-label="Profile: Lecturer">
+            <div class="person-card2-top">
+              <div class="person-card2-role">Lecturer</div>
+              <!-- <div class="person-card2-cta">VIEW</div> -->
+            </div>
+
+            <img class="person-card2-img" src="assets/bios/ValentinaP.jpg" alt="Portrait of Valentina Paz">
+
+            <div class="person-card2-name">Dr Valentina Paz</div>
+            <!-- <div class="person-card2-title">Lecturer in Psychology</div> -->
+
+            <div class="person-card2-tags">
+              <!-- <span class="pill">Epidemiology</span> -->
+            </div>
+          </a>
+        </article>
+
+        <!-- Card -->
+        <article class="person-card2">
+          <a class="person-card2-link" href="#" aria-label="Profile: Head of group">
+            <div class="person-card2-top">
+              <div class="person-card2-role">Specialty Registrar</div>
+              <!-- <div class="person-card2-cta">VIEW</div> -->
+            </div>
+
+            <img class="person-card2-img" src="assets/bios/AndrewL.jpg" alt="Portrait of Andrew Lambarth">
+
+            <div class="person-card2-name">Dr Andrew Lambarth</div>
+            <!-- <div class="person-card2-title">Specialty Registrar in Clinical Pharmacology and Therapeutics and General Internal Medicine</div> -->
+
+            <div class="person-card2-tags">
+              <!-- <span class="pill">Drug safety</span>
+              <span class="pill">Pharmacology</span>
+              <span class="pill">Everything</span> -->
+            </div>
+          </a>
+        </article>
+      </div>
+      </div>
+    </section>
+
+
+    <!-- Logos -->
+    <section class="logos" aria-label="Affiliations and funders">
+      <div class="logos-inner">
+        <!-- logos here -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-left">© <span id="year"></span> MetRX</div>
+    <button class="footer-toggle" id="themeToggle" type="button" aria-label="Toggle theme">Dark</button>
+    <div class="footer-right">Healthcare · Data · Evidence</div>
+  </footer>
+
+</div>
+
+<script>
+  // Theme + year (persist)
+    const html = document.documentElement;
+    const toggle = document.getElementById("themeToggle");
+    const KEY = "metrx-theme";
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // set initial button label from current theme
+    toggle.textContent = (html.dataset.theme === "dark") ? "Light" : "Dark";
+
+    toggle.addEventListener("click", () => {
+    const isDark = html.dataset.theme === "dark";
+    const next = isDark ? "light" : "dark";
+    html.dataset.theme = next;
+
+    // persist
+    localStorage.setItem(KEY, next);
+
+    // update label
+    toggle.textContent = (next === "dark") ? "Light" : "Dark";
+    });
+
+  // mobile nav dropdown
+  const navToggle = document.getElementById("navToggle");
+  const siteNav = document.getElementById("siteNav");
+
+  if (navToggle && siteNav) {
+    navToggle.addEventListener("click", () => {
+      const open = siteNav.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!siteNav.contains(e.target) && !navToggle.contains(e.target)) {
+        siteNav.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+</script>
+
+<!-- SVG filter used by the glass effect (same as other pages) -->
+<svg class="svg-filters" width="0" height="0" aria-hidden="true" focusable="false">
+  <filter id="glass-distortion" x="0%" y="0%" width="100%" height="100%" filterUnits="objectBoundingBox">
+    <feTurbulence type="fractalNoise" baseFrequency="0.001 0.005" numOctaves="1" seed="17" result="turbulence" />
+    <feComponentTransfer in="turbulence" result="mapped">
+      <feFuncR type="gamma" amplitude="1" exponent="10" offset="0.5" />
+      <feFuncG type="gamma" amplitude="0" exponent="1" offset="0" />
+      <feFuncB type="gamma" amplitude="0" exponent="1" offset="0.5" />
+    </feComponentTransfer>
+    <feGaussianBlur in="turbulence" stdDeviation="3" result="softMap" />
+    <feSpecularLighting in="softMap" surfaceScale="5" specularConstant="1" specularExponent="100" lighting-color="white" result="specLight">
+      <fePointLight x="-200" y="-200" z="300" />
+    </feSpecularLighting>
+    <feComposite in="specLight" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litImage" />
+    <feDisplacementMap in="SourceGraphic" in2="softMap" scale="200" xChannelSelector="R" yChannelSelector="G" />
+  </filter>
+</svg>
+
+</body>
+</html>
