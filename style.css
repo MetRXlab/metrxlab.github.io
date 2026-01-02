@@ -215,6 +215,15 @@ body{
 	overflow: hidden;
 }
 
+/* Hero inner container matches .page geometry */
+.hero-inner{
+	position: relative;
+	z-index: 1;
+	max-width: var(--page-max);
+	margin: 0 auto;
+	padding: 0 var(--page-pad-x);
+}
+
 .hero-band{
 	position: absolute;
 	inset: 0;
@@ -225,7 +234,6 @@ body{
 
 .hero--research .hero-band{ background-image: url("assets/img/research-bg.jpg"); }
 .hero--people   .hero-band{ background-image: url("assets/img/people-bg.jpg"); }
-.hero--news     .hero-band{ background-image: url("assets/img/news-bg.jpg"); }
 .hero--publications .hero-band{ background-image: url("assets/img/publications-bg.jpg"); }
 .hero--tools .hero-band{ background-image: url("assets/img/tools-bg.jpg"); }
 
@@ -234,8 +242,9 @@ body{
 	z-index: 1;
 
 	max-width: 860px;
-	margin-left: var(--page-pad-x);
-	margin-right: var(--page-pad-x);
+	/* margin-left: var(--page-pad-x);
+	margin-right: var(--page-pad-x); */
+  margin: 0;
 
 	border-radius: 22px;
 	overflow: hidden;
@@ -316,20 +325,6 @@ body{
 	backdrop-filter: blur(6px);
 	-webkit-backdrop-filter: blur(6px);
 }
-
-@media (min-width: 1000px){
-	.hero-caption{ right: var(--page-pad-x); }
-}
-
-@media (max-width: 700px){
-	.hero-caption{ right: 12px; }
-	.hero-caption-text{
-		font-size: 10px;
-		letter-spacing: 0.12em;
-		padding: 8px 6px;
-	}
-}
-
 
 /* =========================================================
    6) INDEX layout grid (homepage only)
@@ -1089,6 +1084,19 @@ html[data-theme="dark"] .news-item-sub{
 	.press-card:nth-child(-n+2){ border-top: none; }
 }
 
+@media (min-width: 1000px){
+	.hero-caption{ right: 18px;; }
+}
+
+@media (max-width: 700px){
+	.hero-caption{ right: 18px; }
+	.hero-caption-text{
+		font-size: 10px;
+		letter-spacing: 0.12em;
+		padding: 8px 6px;
+	}
+}
+
 @media (max-width: 900px){
 	.nav-toggle{ display: inline-flex; }
 
@@ -1119,11 +1127,9 @@ html[data-theme="dark"] .news-item-sub{
 	.hero-glass{
 		width: calc(100% - (var(--page-pad-x) * 2));
 		max-width: 100%;
-		margin-left: var(--page-pad-x);
-		margin-right: var(--page-pad-x);
 	}
 
-	.glass-content{ padding: 30px 28px; }
+	/* .glass-content{ padding: 30px 28px; } */
 	.hero-title{ font-size: clamp(44px, 7vw, 64px); }
 	.hero p{ font-size: 16px; }
 }
@@ -1149,7 +1155,7 @@ html[data-theme="dark"] .news-item-sub{
 		--hero-pad-bottom: 54px;
 	}
 
-	.glass-content{ padding: 26px 22px; }
+	/* .glass-content{ padding: 26px 22px; } */
 	.hero-title{ font-size: clamp(40px, 8vw, 58px); }
 
 	.press-grid{ grid-template-columns: 1fr; }
