@@ -346,9 +346,9 @@
 	font-size: 10px;
 	line-height: 1;
 
-	/* writing-mode: vertical-rl; 
+	writing-mode: vertical-rl; 
     text-orientation: mixed;
-	transform: rotate(180deg); */
+	transform: rotate(180deg);
 
 	padding: 4px 4px;
 	background: rgba(0,0,0,0.20);
